@@ -1,20 +1,22 @@
 {
-  "name": "letter-terminal",
-  "private": true,
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "check-types": "turbo run check-types"
-  },
-  "devDependencies": {
-    "prettier": "3.9.6",
-    "turbo": "^2.10.12",
-    "typescript": "7.0.2"
-  },
-  "packageManager": "pnpm@11.25.0",
-  "engines": {
-    "node": ">=24"
-  }
+    "name": "letter-terminal",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "dev": "concurrently \"turbo dev\" \"sleep 2 && open http://localhost:3010\"",
+        "build": "turbo run build",
+        "lint": "turbo run lint",
+        "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+        "check-types": "turbo run check-types"
+    },
+    "devDependencies": {
+        "concurrently": "^10.0.5",
+        "prettier": "3.9.6",
+        "turbo": "^2.10.12",
+        "typescript": "7.0.2"
+    },
+    "packageManager": "pnpm@11.25.0",
+    "engines": {
+        "node": ">=24"
+    }
 }
