@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { ThemeProvider } from 'next-themes';
+import { ThemeProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/next";
-import "./globals.css";
+import "./globals.scss";
 
 const inter = Inter({
-    weight: ['400', '500', '600', '700', '800', '900'],
+    weight: ["400", "500", "600", "700", "800", "900"],
     subsets: ["latin"],
-    display: 'swap'
+    display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -19,7 +19,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     return (
         <html lang="en">
             <head>
-                <meta name="apple-mobile-web-app-title" content="Letter Terminal" />
+                <meta
+                    name="apple-mobile-web-app-title"
+                    content="Letter Terminal"
+                />
             </head>
 
             <body className={`${inter.className}`}>
