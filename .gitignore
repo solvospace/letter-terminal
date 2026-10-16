@@ -1,7 +1,8 @@
+
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # Dependencies
-node_modules
+node_modules/
 .pnp
 .pnp.js
 
@@ -11,20 +12,19 @@ node_modules
 !.env.example
 
 # Testing
-coverage
+coverage/
 
 # Turbo
-.turbo
+.turbo/
 
 # Vercel
-.vercel
+.vercel/
 
 # Build Outputs
 .next/
 out/
-build
-dist
-
+build/
+dist/
 
 # Debug
 npm-debug.log*
@@ -35,22 +35,29 @@ yarn-error.log*
 .DS_Store
 *.pem
 
-# Python
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
+# Go - compiled binaries
+/bin/
+/tmp/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
 
-# Virtual environments
-.venv/
-venv/
-env/
+# Go - coverage reports
+coverage.out
+coverage.html
 
-# Testing / coverage
-.pytest_cache/
-.coverage
-htmlcov/
+dev.sh
 
-# Type checking / tooling
-.mypy_cache/
-.ruff_cache/
+# Go - workspace files (optional)
+# go.work
+# go.work.sum
+
+# IDE and editors
+.idea/
+.vscode/
+*.swp
+*.swo
