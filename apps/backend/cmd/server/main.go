@@ -1,9 +1,15 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
+	"log"
+	"backend/internal/app"
 )
 
 func main() {
-	gin.Default().Run(":8080")
+	application:= app.New();
+	appError := application.Run();
+
+	if  appError != nil {
+		log.Fatal(appError)
+	}
 }
