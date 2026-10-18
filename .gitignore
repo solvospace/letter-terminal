@@ -51,6 +51,7 @@ coverage.out
 coverage.html
 
 dev.sh
+bin/
 
 # Go - workspace files (optional)
 # go.work
