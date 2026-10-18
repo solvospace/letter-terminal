@@ -11,7 +11,7 @@
 
 ## License
 
-Copyright © 2026, Solvospace.
+Copyright © 2026-present, Solvospace.
 
 Letter Terminal is licensed under the GNU Affero General Public License v3.0.
 
