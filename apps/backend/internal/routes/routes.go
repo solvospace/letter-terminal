@@ -6,10 +6,10 @@ import (
 	"net/http"
 )
 
-func RegisterRoutes(router *gin.Engine) {
+func RegisterV1Routes(router *gin.Engine) {
 	v1 := router.Group("/api/v1")
 
-	auth.RegisterRoutes(v1.Group("/auth"))
+	auth.Routes(v1.Group("/auth"))
 
 	v1.GET("/health", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
