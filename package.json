@@ -4,7 +4,9 @@
     "private": true,
     "scripts": {
         "dev": "concurrently \"turbo run dev --concurrency=10\" \"wait-on http://localhost:3010 && open http://localhost:3010\"",
-        "clean": "turbo run clean && rm -rf .turbo && rm -rf .next && rm -rf node_modules && rm -rf dist",
+        "clean": "turbo run clean && rm -rf .turbo .next node_modules dist apps/backend/bin apps/backend/tmp",
+        "install:all": "pnpm install --frozen-lockfile && cd apps/backend && go mod download",
+        "clean:go": "cd apps/backend && go clean -cache -testcache -modcache",
         "build": "turbo run build",
         "lint": "turbo run lint",
         "format": "prettier --write \"**/*.{ts,tsx,md}\"",
@@ -12,14 +14,14 @@
     },
     "devDependencies": {
         "concurrently": "^10.0.5",
-        "turbo": "^2.10.12",
         "wait-on": "^9.1.0",
+        "turbo": "2.11.10",
         "@types/node": "24.1.0",
         "typescript": "6.0.3",
         "eslint": "9.39.1"
     },
-    "packageManager": "pnpm@12.11.2",
+    "packageManager": "pnpm@12.14.0",
     "engines": {
-        "node": "24.20.0"
+        "node": "24.22.1"
     }
 }
