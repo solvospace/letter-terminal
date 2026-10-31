@@ -1,0 +1,57 @@
+# Git
+.git
+.gitignore
+
+# Node.js / PNPM monorepo
+node_modules
+.pnpm-store
+.turbo
+**/node_modules
+**/.turbo
+
+# Go build artifacts
+**/bin/
+**/dist/
+**/*.exe
+**/*.test
+**/coverage.out
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# IDE and editor
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
+
+# Documentation and unnecessary files
+README*
+
+**/.next/
+**/out/
+**/next-env.d.ts
+
+**/.next/cache/
+
+**/.vercel/
+
+**/node_modules/
+**/.pnpm-store/
+
+**/dist/
+**/build/
+**/.turbo/
