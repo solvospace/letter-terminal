@@ -23,7 +23,7 @@ func (app *App) Run() error {
 	var port string = os.Getenv("PORT")
 
 	if port == "" {
-		port = "9090"
+		port = ":9090"
 	}
 
 	return app.router.Run(port)
