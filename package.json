@@ -3,7 +3,7 @@
     "license": "AGPL-3.0-or-later",
     "private": true,
     "scripts": {
-        "dev": "concurrently \"turbo run dev --concurrency=10\" \"wait-on http://localhost:3010 && open http://localhost:3010\"",
+        "dev": "turbo run dev & sleep 3 && open http://localhost:3010",
         "clean": "turbo run clean && rm -rf .turbo .next node_modules dist apps/backend/bin apps/backend/tmp",
         "install:all": "pnpm install --frozen-lockfile && cd apps/backend && go mod download",
         "clean:go": "cd apps/backend && go clean -cache -testcache -modcache",
@@ -13,15 +13,13 @@
         "check-types": "turbo run check-types"
     },
     "devDependencies": {
-        "concurrently": "^10.0.5",
-        "wait-on": "^9.1.0",
-        "turbo": "2.11.10",
-        "@types/node": "24.1.0",
-        "typescript": "6.0.3",
-        "eslint": "9.39.1"
+        "turbo": "catalog:",
+        "@types/node": "catalog:",
+        "typescript": "catalog:",
+        "eslint": "catalog:"
     },
-    "packageManager": "pnpm@12.14.0",
     "engines": {
-        "node": ">=24.22.2"
-    }
+        "node": ">=24.22.3"
+    },
+    "packageManager": "pnpm@12.21.0"
 }
